@@ -125,12 +125,6 @@ module.exports = yeoman.generators.Base.extend({
 					repoName: this.repoName
 				}
 			);
-			this.fs.copyTpl(
-				this.templatePath('src/_boilerplate.scss'), this.destinationPath('src/' + this.kebabCaseName + '.scss'),
-				{
-					kebabCaseName: this.kebabCaseName
-				}
-			);
 			if (this.templateLanguage === 'Soy') {
 				this.fs.copyTpl(
 					this.templatePath('src/_Boilerplate.soy'), this.destinationPath('src/' + this.componentName + '.soy'),

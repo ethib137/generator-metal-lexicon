@@ -20,7 +20,6 @@ describe('metal-lexicon:app', function () {
 		assert.file([
 			'demos/index.html',
 			'src/SelectInput.js',
-			'src/select-input.scss',
 			'src/SelectInput.soy',
 			'test/SelectInput.js',
 			'test/.jshintrc',

@@ -6,10 +6,15 @@
 	<title>Demo: <%= capitalizeName %></title>
 
 	<link rel="stylesheet" href="../node_modules/lexicon-ux/build/css/atlas-font-awesome.css">
-	<link rel="stylesheet" href="../build/<%= kebabCaseName %>.css">
 
 	<script src="../node_modules/jquery/dist/jquery.js"></script>
 	<script src="../build/jquery/<%= kebabCaseName %>.js"></script>
+
+	<style>
+		body {
+			padding: 10px;
+		}
+	</style>
 </head>
 <body>
 	<h1><%= capitalizeName %></h1>
