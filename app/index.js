@@ -8,7 +8,7 @@ var yosay  = require('yosay');
 module.exports = yeoman.generators.Base.extend({
 	initializing: function () {
 		this.log(yosay(
-			'Welcome, let\'s generate a ' + chalk.blue('Metal') + ' project!'
+			'Welcome, let\'s generate a ' + chalk.blue('Metal Lexicon') + ' component!'
 		));
 	},
 
@@ -79,7 +79,7 @@ module.exports = yeoman.generators.Base.extend({
 			type: 'input',
 			name: 'repoOwner',
 			message: 'What\'s the GitHub username?',
-			default: 'my-user',
+			default: 'liferay-lexicon',
 			validate: function(input) {
 				if (!input) {
 					return 'You must provide a GitHub username.';
@@ -87,12 +87,6 @@ module.exports = yeoman.generators.Base.extend({
 
 				return true;
 			}
-		},
-		{
-			type: 'input',
-			name: 'repoDescription',
-			message: 'How would you describe this project?',
-			default: 'My awesome Metal.js project'
 		}];
 
 		this.prompt(prompts, function (props) {
@@ -105,9 +99,9 @@ module.exports = yeoman.generators.Base.extend({
 
 			this.defaultKarmaConfig = props.defaultKarmaConfig;
 			this.isNodeModule = props.isNodeModule;
-			this.repoName = 'metal-' + this.kebabCaseName;
+			this.repoName = 'lexicon-' + this.kebabCaseName;
 			this.repoOwner = props.repoOwner;
-			this.repoDescription = props.repoDescription;
+			this.repoDescription = 'Lexicon ' + this.capitalizeName + ' Component';
 			this.buildFormat = props.buildFormat;
 			this.superClass = props.superClass;
 			this.templateLanguage = props.templateLanguage || 'None';
