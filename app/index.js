@@ -55,7 +55,7 @@ module.exports = yeoman.generators.Base.extend({
 			name: 'buildFormat',
 			message: 'Which build format will this component use?',
 			choices: ['globals', 'jquery', 'amd'],
-			default: 'globals',
+			default: 'amd',
 			validate: function(input) {
 				if (!input) {
 					return 'You must provide the Metal component build format.';
@@ -73,7 +73,8 @@ module.exports = yeoman.generators.Base.extend({
 		{
 			type: 'confirm',
 			name: 'defaultKarmaConfig',
-			message: 'Do you want to use the default karma configuration? (if so, the karma.conf.js file won\'t be generated, since the gulp tasks will handle the config)'
+			message: 'Do you want to use the default karma configuration? (if so, the karma.conf.js file won\'t be generated, since the gulp tasks will handle the config)',
+			default: false
 		},
 		{
 			type: 'input',
